@@ -26,7 +26,7 @@ class Termination
   end
 
   def section(header, sub_header = nil, &block)
-    @slides << Slide.new(5) { |slide|
+    @slides << Slide.new(2) { |slide|
       slide.hr.br.text{ |color|
         color.bold{ header }
       }.br.hr
