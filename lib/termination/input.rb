@@ -31,6 +31,12 @@ class Termination
       $stdin.noecho { |noecho|
         noecho.getch.tap { |input|
           2.times { input << noecho.getch } if input == "\e"
+          if input == "/"
+            input.clear
+            while (next_input = noecho.getch) =~ /\d/
+              input << next_input
+            end
+          end
         }
       }
     end

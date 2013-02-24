@@ -51,6 +51,11 @@ class Termination
       self
     end
 
+    def video(&block)
+      add Exec.show_video(block.call)
+      self
+    end
+
     def script(show_output = true, &block)
       add Exec.show_script(block.call, show_output)
       self

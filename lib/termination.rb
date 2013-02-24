@@ -15,7 +15,7 @@ class Termination
       input.map_keys(Input::KEYS[:left_arrow]) do
         self.previous_slide
       end
-      input.map_keys(*(1..9).map(&:to_s)) do |num_pressed|
+      input.map_keys(*(1..100).map(&:to_s)) do |num_pressed|
         self.show_slide(@slide_cursor = (num_pressed.to_i - 1))
       end
       input.map_keys('q', 'Q') do
