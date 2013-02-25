@@ -1,7 +1,4 @@
 # encoding: utf-8
-require 'io/console'
-require 'artii'
-require 'coderay'
 
 class Termination
   class Slide

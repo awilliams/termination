@@ -3,7 +3,7 @@ class Termination
   class Slide
     class Text
       def self.new_br(num)
-        self.new([''] * num)
+        self.new("\n\s" * num)
       end
 
       def self.new_hr(fleuron, num_cols)
@@ -15,7 +15,7 @@ class Termination
       attr_reader :row_width, :align
 
       def initialize(content, align = :center)
-        @content = content.respond_to?(:each) ? content : content.split("\n")
+        @content = content.respond_to?(:each) ? content.map{|c| c.split("\n") }.flatten : content.split("\n")
         @align = align
       end
 

@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 require "termination/version"
+require 'io/console'
+require 'artii'
+require 'coderay'
 
 class Termination
   attr_reader :slide_cursor
