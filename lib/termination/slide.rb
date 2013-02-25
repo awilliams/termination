@@ -37,7 +37,7 @@ class Termination
     def code(language = 'ruby', &block)
       source = block.call
       source = source.read if source.respond_to?(:read)
-      add Text.new(CodeRay.scan(source, language).term, :center_all)
+      add Text.new(CodeRay.scan(source, language).term, :left)
       self
     end
 
